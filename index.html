@@ -22,10 +22,6 @@
         height: auto;
         width: 300px;
         margin-top: 30px;
-
-        h1{
-            font-size: 30px;
-        }
          
         p{
             margin-top: 30px;
@@ -40,6 +36,12 @@
             button:active{
                 scale: 1.2;
             }
+        }
+        h1{
+            font-size: 30px;
+            font-weight: 800;
+            padding: 20px 0;
+            text-shadow: 2px 2px rgb(253, 250, 233);
         }
 
         img{
@@ -56,6 +58,16 @@
             border-radius: 10px;
         }
     }
+    .section2{
+        margin-left: -80px;
+        width: 400px;
+        img{
+            display: none;
+        }
+    }
+    .section3{
+        margin-left: -80px;
+    }
 
 </style>
 <body>
@@ -67,7 +79,12 @@
         <section>
             <img src="logo.jpg" alt="" id="logo">
         </section>
+        <section class="section2">
+            <h1>This is my Controler</h1>
+            <img id="cont" src="Control.jpg" alt="">
+        </section>
         <section class="section3">
+            <h1>And this is my Sensitivity</h1>
             <img id="images1" src="1.jpg" alt="">
             <img id="images" src="2.jpg" alt="">
             <img id="images" src="3.jpg" alt="">
@@ -77,17 +94,21 @@
     </div>
 
 
+    <!-- In this Time javaScript Started -->
+
     <script>
         const text = document.getElementById("sec");
         const logo = document.getElementById("logo");
         const btn = document.getElementById("btn");
         const image = document.querySelector(".section3")
+        const controler = document.getElementById('cont');
 
         const click = ()=>{
             btn.addEventListener("click",()=>{
                 text.style.display="none";
                 logo.style.display="none";
                 image.style.display='block'
+                controler.style.display ='block'
             })
         }
         click()
